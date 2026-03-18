@@ -76,6 +76,8 @@ h1 {
 }
 h1 em { font-style: italic; color: var(--color-gold); font-weight: var(--weight-light); }
 
+h1 span { color: var(--color-gold); }
+
 h2 {
   font-family: var(--font-serif);
   font-size: var(--text-2xl);
