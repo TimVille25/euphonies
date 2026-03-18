@@ -6,15 +6,10 @@
 
 
 /* ────────────────────────────────────────────────────────────
-   0. TOKENS — Variables de design globales
-   ────────────────────────────────────────────────────────────
-   Toutes les valeurs brutes de la charte : couleurs, typo,
-   espacements, transitions. Jamais utilisées directement dans
-   le HTML, toujours via les niveaux supérieurs.
+   0. TOKENS
    ──────────────────────────────────────────────────────────── */
 
 :root {
-  /* Couleurs */
   --color-ink:          #1a1714;
   --color-ink-soft:     #3d3830;
   --color-ink-muted:    #7a6f62;
@@ -23,31 +18,21 @@
   --color-gold:         #a8855a;
   --color-gold-light:   #c9a97a;
   --color-gold-pale:    #f0e6d4;
-
-  /* Règles (bordures semi-transparentes) */
   --color-rule:         rgba(26, 23, 20, 0.12);
   --color-rule-strong:  rgba(26, 23, 20, 0.25);
-
-  /* Typographie */
   --font-serif:  'Cormorant Garamond', Georgia, serif;
   --font-sans:   'Jost', sans-serif;
-
-  /* Tailles de police */
-  --text-xs:    0.68rem;   /* labels, tags */
-  --text-sm:    0.78rem;   /* nav, légendes */
+  --text-xs:    0.68rem;
+  --text-sm:    0.78rem;
   --text-base:  1rem;
   --text-md:    1.05rem;
   --text-lg:    1.25rem;
   --text-xl:    1.5rem;
   --text-2xl:   clamp(2rem, 4vw, 3rem);
   --text-hero:  clamp(4rem, 10vw, 8rem);
-
-  /* Graisse */
   --weight-light:   300;
   --weight-regular: 400;
   --weight-medium:  500;
-
-  /* Espacements */
   --space-1:  0.3rem;
   --space-2:  0.5rem;
   --space-3:  0.8rem;
@@ -59,29 +44,17 @@
   --space-12: 4rem;
   --space-16: 6rem;
   --space-20: 8rem;
-
-  /* Transitions */
   --transition-fast: 0.2s ease;
 }
 
 
 /* ────────────────────────────────────────────────────────────
-   1. ATOMS — Éléments HTML de base et utilitaires primitifs
-   ────────────────────────────────────────────────────────────
-   Reset, base body, balises HTML sémantiques (h1–h4, p, a…),
-   et classes utilitaires sans composition.
+   1. ATOMS
    ──────────────────────────────────────────────────────────── */
 
-/* Reset */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-sans);
@@ -92,7 +65,6 @@ body {
   font-weight: var(--weight-light);
 }
 
-/* Titres */
 h1 {
   font-family: var(--font-serif);
   font-size: var(--text-hero);
@@ -102,12 +74,7 @@ h1 {
   color: var(--color-ink);
   margin-bottom: 0.2rem;
 }
-
-h1 em {
-  font-style: italic;
-  color: var(--color-gold);
-  font-weight: var(--weight-light);
-}
+h1 em { font-style: italic; color: var(--color-gold); font-weight: var(--weight-light); }
 
 h2 {
   font-family: var(--font-serif);
@@ -117,11 +84,7 @@ h2 {
   color: var(--color-ink);
   margin-bottom: var(--space-8);
 }
-
-h2 em {
-  font-style: italic;
-  color: var(--color-gold);
-}
+h2 em { font-style: italic; color: var(--color-gold); }
 
 h3 {
   font-family: var(--font-serif);
@@ -139,22 +102,11 @@ h4 {
   margin-bottom: 0.4rem;
 }
 
-p {
-  margin-bottom: var(--space-4);
-  color: var(--color-ink-soft);
-}
+p { margin-bottom: var(--space-4); color: var(--color-ink-soft); }
+p:last-child { margin-bottom: 0; }
 
-p:last-child {
-  margin-bottom: 0;
-}
+a { color: inherit; text-decoration: none; transition: color var(--transition-fast); }
 
-a {
-  color: inherit;
-  text-decoration: none;
-  transition: color var(--transition-fast);
-}
-
-/* Atom : label de section (eyebrow) */
 .a-label {
   font-family: var(--font-sans);
   font-size: var(--text-xs);
@@ -166,20 +118,14 @@ a {
   display: block;
 }
 
-/* Atom : filet doré décoratif */
 .a-rule {
   width: 40px;
   height: 1px;
   background: var(--color-gold);
   margin-bottom: var(--space-8);
 }
+.a-rule--center { margin-left: auto; margin-right: auto; }
 
-.a-rule--center {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Atom : chiffre grand format */
 .a-stat-number {
   font-family: var(--font-serif);
   font-size: 3.5rem;
@@ -188,7 +134,6 @@ a {
   color: var(--color-ink);
   margin-bottom: 0.4rem;
 }
-
 .a-stat-number span {
   font-size: var(--text-xl);
   color: var(--color-gold);
@@ -196,7 +141,6 @@ a {
   margin-left: 2px;
 }
 
-/* Atom : description de statistique */
 .a-stat-label {
   font-size: 0.82rem;
   letter-spacing: 0.08em;
@@ -205,7 +149,6 @@ a {
   margin: 0;
 }
 
-/* Atom : badge / tag */
 .a-tag {
   font-size: var(--text-xs);
   font-weight: var(--weight-regular);
@@ -219,15 +162,21 @@ a {
   display: inline-block;
 }
 
-/* Atom : animation d'entrée */
+/* Atom : animation d'entrée
+   Visible par défaut — l'animation ne s'active que si JS est prêt
+   (.js-ready sur <body>) ET que l'utilisateur accepte les animations. */
+.a-fade-in {
+  opacity: 1;
+  transform: none;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  .a-fade-in {
+  body.js-ready .a-fade-in {
     opacity: 0;
     transform: translateY(18px);
     transition: opacity 0.7s ease, transform 0.7s ease;
   }
-
-  .a-fade-in.is-visible {
+  body.js-ready .a-fade-in.is-visible {
     opacity: 1;
     transform: none;
   }
@@ -235,38 +184,22 @@ a {
 
 
 /* ────────────────────────────────────────────────────────────
-   2. MOLECULES — Combinaisons d'atomes formant des unités UI
-   ────────────────────────────────────────────────────────────
-   Chaque molécule est un composant autonome et réutilisable,
-   assemblé à partir d'atomes.
+   2. MOLECULES
    ──────────────────────────────────────────────────────────── */
 
-/* Molecule : en-tête de section (label + titre + filet) */
-.m-section-header {
-  margin-bottom: var(--space-8);
-}
+.m-section-header { margin-bottom: var(--space-8); }
+.m-section-header--center { text-align: center; }
+.m-section-header--center .a-rule { margin-left: auto; margin-right: auto; }
 
-.m-section-header--center {
-  text-align: center;
-}
-
-.m-section-header--center .a-rule {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Molecule : statistique (chiffre + label) */
 .m-stat {
   border-top: 0.5px solid var(--color-rule-strong);
   padding-top: var(--space-5);
 }
 
-/* Molecule : pilier (trait gauche doré + titre + texte) */
 .m-pilier {
   padding-left: var(--space-5);
   border-left: 1px solid var(--color-gold-light);
 }
-
 .m-pilier__titre {
   font-family: var(--font-serif);
   font-size: var(--text-md);
@@ -274,7 +207,6 @@ a {
   color: var(--color-ink);
   margin-bottom: 0.3rem;
 }
-
 .m-pilier__desc {
   font-size: 0.92rem;
   line-height: 1.65;
@@ -282,7 +214,6 @@ a {
   color: var(--color-ink-muted);
 }
 
-/* Molecule : item de concert (date + info + tag) */
 .m-concert {
   display: grid;
   grid-template-columns: 80px 1fr auto;
@@ -291,15 +222,8 @@ a {
   padding: var(--space-6) 0;
   border-top: 0.5px solid var(--color-rule);
 }
-
-.m-concert:last-child {
-  border-bottom: 0.5px solid var(--color-rule);
-}
-
-.m-concert__date {
-  text-align: center;
-}
-
+.m-concert:last-child { border-bottom: 0.5px solid var(--color-rule); }
+.m-concert__date { text-align: center; }
 .m-concert__jour {
   font-family: var(--font-serif);
   font-size: 2.2rem;
@@ -307,7 +231,6 @@ a {
   line-height: 1;
   color: var(--color-ink);
 }
-
 .m-concert__mois {
   font-size: 0.7rem;
   letter-spacing: 0.15em;
@@ -315,14 +238,8 @@ a {
   color: var(--color-gold);
   margin-top: 2px;
 }
+.m-concert__info p { font-size: 0.88rem; color: var(--color-ink-muted); margin: 0; }
 
-.m-concert__info p {
-  font-size: 0.88rem;
-  color: var(--color-ink-muted);
-  margin: 0;
-}
-
-/* Molecule : note encadrée (citation, remarque) */
 .m-note {
   padding: var(--space-5);
   background: var(--color-gold-pale);
@@ -334,7 +251,6 @@ a {
   margin-top: var(--space-10);
 }
 
-/* Molecule : étape numérotée */
 .m-etape {
   display: grid;
   grid-template-columns: 32px 1fr;
@@ -343,11 +259,7 @@ a {
   border-top: 0.5px solid var(--color-rule);
   counter-increment: etape;
 }
-
-.m-etape:last-child {
-  border-bottom: 0.5px solid var(--color-rule);
-}
-
+.m-etape:last-child { border-bottom: 0.5px solid var(--color-rule); }
 .m-etape__num {
   font-family: var(--font-serif);
   font-size: 1.2rem;
@@ -355,19 +267,9 @@ a {
   color: var(--color-gold);
   margin-top: 2px;
 }
+.m-etape__num::before { content: counter(etape, decimal-leading-zero); }
+.m-etape__body p { font-size: 0.9rem; margin: 0; color: var(--color-ink-muted); line-height: 1.65; }
 
-.m-etape__num::before {
-  content: counter(etape, decimal-leading-zero);
-}
-
-.m-etape__body p {
-  font-size: 0.9rem;
-  margin: 0;
-  color: var(--color-ink-muted);
-  line-height: 1.65;
-}
-
-/* Molecule : item d'encart sombre */
 .m-encart-item {
   display: flex;
   align-items: flex-start;
@@ -377,19 +279,9 @@ a {
   color: rgba(246, 242, 235, 0.75);
   line-height: 1.55;
 }
+.m-encart-item::before { content: '—'; color: var(--color-gold-light); flex-shrink: 0; margin-top: 1px; }
+.m-encart-item:last-of-type { margin-bottom: var(--space-8); }
 
-.m-encart-item::before {
-  content: '—';
-  color: var(--color-gold-light);
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-
-.m-encart-item:last-of-type {
-  margin-bottom: var(--space-8);
-}
-
-/* Molecule : lien CTA texte souligné */
 .m-cta-link {
   display: inline-block;
   font-family: var(--font-sans);
@@ -402,12 +294,8 @@ a {
   padding-bottom: 2px;
   transition: color var(--transition-fast);
 }
+.m-cta-link:hover { color: var(--color-gold); }
 
-.m-cta-link:hover {
-  color: var(--color-gold);
-}
-
-/* Molecule : lien email grand format */
 .m-email-link {
   display: inline-block;
   font-family: var(--font-serif);
@@ -419,25 +307,16 @@ a {
   margin: var(--space-8) 0;
   transition: color var(--transition-fast);
 }
-
-.m-email-link:hover {
-  color: var(--color-gold);
-}
+.m-email-link:hover { color: var(--color-gold); }
 
 
 /* ────────────────────────────────────────────────────────────
-   3. ORGANISMS — Sections et blocs composés de molécules
-   ────────────────────────────────────────────────────────────
-   Organismes plus complexes, liés à une zone précise de la
-   page. Chaque organisme est contextuellement nommé.
+   3. ORGANISMS
    ──────────────────────────────────────────────────────────── */
 
-/* Organism : barre de navigation */
 .o-nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 100;
   display: flex;
   align-items: center;
@@ -448,7 +327,6 @@ a {
   backdrop-filter: blur(8px);
   border-bottom: 0.5px solid var(--color-rule);
 }
-
 .o-nav__logo {
   font-family: var(--font-serif);
   font-size: var(--text-xl);
@@ -456,17 +334,39 @@ a {
   letter-spacing: 0.02em;
   color: var(--color-ink);
 }
-
-.o-nav__logo span {
+.o-nav__logo span { color: var(--color-gold); }
+.o-nav__clef {
+  font-family: 'Noto Music', serif;
   color: var(--color-gold);
+  font-size: 0.75em;
+  line-height: 1;
+  vertical-align: 0.05em;
+  display: inline-block;
 }
-
-.o-nav__links {
-  display: flex;
-  gap: var(--space-8);
-  list-style: none;
+.o-nav__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
 }
-
+.o-nav__burger span {
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--color-ink);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: center;
+}
+.o-nav__burger.is-open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.o-nav__burger.is-open span:nth-child(2) { opacity: 0; }
+.o-nav__burger.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+.o-nav__links { display: flex; gap: var(--space-8); list-style: none; }
 .o-nav__links a {
   font-family: var(--font-sans);
   font-size: var(--text-sm);
@@ -476,12 +376,8 @@ a {
   color: var(--color-ink-muted);
   transition: color var(--transition-fast);
 }
+.o-nav__links a:hover { color: var(--color-ink); }
 
-.o-nav__links a:hover {
-  color: var(--color-ink);
-}
-
-/* Organism : hero plein écran */
 .o-hero {
   min-height: 100vh;
   display: flex;
@@ -493,19 +389,8 @@ a {
   position: relative;
   overflow: hidden;
 }
-
-.o-hero__staff {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.045;
-}
-
-.o-hero__content {
-  position: relative;
-  z-index: 1;
-}
-
+.o-hero__staff { position: absolute; inset: 0; pointer-events: none; opacity: 0.045; }
+.o-hero__content { position: relative; z-index: 1; }
 .o-hero__eyebrow {
   font-family: var(--font-sans);
   font-size: 0.72rem;
@@ -515,7 +400,6 @@ a {
   color: var(--color-gold);
   margin-bottom: var(--space-6);
 }
-
 .o-hero__tagline {
   font-family: var(--font-serif);
   font-size: clamp(1.1rem, 2.5vw, 1.5rem);
@@ -526,58 +410,16 @@ a {
   margin-bottom: var(--space-10);
   letter-spacing: 0.02em;
 }
+.o-hero__rule { width: 48px; height: 1px; background: var(--color-gold); margin: 0 auto var(--space-10); }
 
-.o-hero__rule {
-  width: 48px;
-  height: 1px;
-  background: var(--color-gold);
-  margin: 0 auto var(--space-10);
-}
+.o-presentation__grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: start; }
+.o-stats { display: flex; flex-direction: column; gap: var(--space-8); padding-top: var(--space-4); }
+.o-piliers { margin-top: var(--space-8); display: flex; flex-direction: column; gap: var(--space-6); }
+.o-concerts { margin-top: var(--space-4); }
 
-/* Organism : grille de présentation (texte + stats) */
-.o-presentation__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-16);
-  align-items: start;
-}
+.o-rejoindre__grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-16); align-items: start; }
+.o-etapes { margin-top: var(--space-5); counter-reset: etape; }
 
-/* Organism : liste de statistiques empilées */
-.o-stats {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-8);
-  padding-top: var(--space-4);
-}
-
-/* Organism : liste de piliers */
-.o-piliers {
-  margin-top: var(--space-8);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-6);
-}
-
-/* Organism : liste de concerts */
-.o-concerts {
-  margin-top: var(--space-4);
-}
-
-/* Organism : grille rejoindre (étapes + encart) */
-.o-rejoindre__grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: var(--space-16);
-  align-items: start;
-}
-
-/* Organism : liste d'étapes numérotées */
-.o-etapes {
-  margin-top: var(--space-5);
-  counter-reset: etape;
-}
-
-/* Organism : encart sombre */
 .o-encart {
   background: var(--color-ink);
   color: var(--color-parchment-lt);
@@ -585,7 +427,6 @@ a {
   position: sticky;
   top: 88px;
 }
-
 .o-encart__titre {
   font-family: var(--font-serif);
   font-size: 1.6rem;
@@ -594,12 +435,7 @@ a {
   margin-bottom: var(--space-5);
   line-height: 1.2;
 }
-
-.o-encart__titre em {
-  font-style: italic;
-  color: var(--color-gold-light);
-}
-
+.o-encart__titre em { font-style: italic; color: var(--color-gold-light); }
 .o-encart__note {
   border-top: 0.5px solid rgba(246, 242, 235, 0.15);
   padding-top: var(--space-5);
@@ -610,7 +446,6 @@ a {
   line-height: 1.6;
 }
 
-/* Organism : footer */
 .o-footer {
   background: var(--color-ink);
   color: rgba(246, 242, 235, 0.4);
@@ -620,48 +455,20 @@ a {
   letter-spacing: 0.1em;
   font-weight: var(--weight-light);
 }
+.o-footer span { color: var(--color-gold-light); }
 
-.o-footer span {
-  color: var(--color-gold-light);
-}
-
-/* Organism : bloc contact centré */
-.o-contact {
-  text-align: center;
-}
-
-.o-contact p {
-  font-size: 0.92rem;
-  color: var(--color-ink-muted);
-}
+.o-contact { text-align: center; }
+.o-contact p { font-size: 0.92rem; color: var(--color-ink-muted); }
 
 
 /* ────────────────────────────────────────────────────────────
-   4. LAYOUT — Conteneurs et sections de page
-   ────────────────────────────────────────────────────────────
-   Mise en page générale : grille de page, sections,
-   conteneurs, fonds alternés.
+   4. LAYOUT
    ──────────────────────────────────────────────────────────── */
 
-/* Conteneur centré */
-.l-container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Section générique */
-.l-section {
-  padding: var(--space-20) 2rem;
-}
-
-/* Variantes de fond */
-.l-section--parchment {
-  background: var(--color-parchment);
-}
-
-.l-section--light {
-  background: var(--color-parchment-lt);
-}
+.l-container { max-width: 900px; margin: 0 auto; }
+.l-section { padding: var(--space-20) 2rem; }
+.l-section--parchment { background: var(--color-parchment); }
+.l-section--light { background: var(--color-parchment-lt); }
 
 
 /* ────────────────────────────────────────────────────────────
@@ -669,38 +476,32 @@ a {
    ──────────────────────────────────────────────────────────── */
 
 @media (max-width: 768px) {
-  .o-nav {
-    padding: 0 var(--space-5);
-  }
-
+  .o-nav { padding: 0 var(--space-5); }
+  .o-nav__burger { display: flex; }
   .o-nav__links {
+    display: none;
+  }
+  .o-nav__links.is-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 64px; left: 0; right: 0;
+    background: rgba(250, 248, 244, 0.98);
+    backdrop-filter: blur(8px);
+    border-bottom: 0.5px solid var(--color-rule);
+    padding: var(--space-5) var(--space-5) var(--space-8);
     gap: var(--space-5);
+    z-index: 99;
   }
-
-  .o-nav__links li:nth-child(1),
-  .o-nav__links li:nth-child(2) {
-    display: none;
+  .o-nav__links.is-open a {
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    color: var(--color-ink);
   }
-
-  .l-section {
-    padding: 5rem var(--space-5);
-  }
-
+  .l-section { padding: 5rem var(--space-5); }
   .o-presentation__grid,
-  .o-rejoindre__grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .o-encart {
-    position: static;
-  }
-
-  .m-concert {
-    grid-template-columns: 64px 1fr;
-  }
-
-  .m-concert .a-tag {
-    display: none;
-  }
+  .o-rejoindre__grid { grid-template-columns: 1fr; gap: 3rem; }
+  .o-encart { position: static; }
+  .m-concert { grid-template-columns: 64px 1fr; }
+  .m-concert .a-tag { display: none; }
 }

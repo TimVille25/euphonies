@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EuphonieS — Ensemble vocal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&family=Noto+Music&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="euphonies.css">
+</head>
+<body>
+
+  <nav class="o-nav">
+    <a href="#accueil" class="o-nav__logo">Euphonie<span>S</span></a>
+    <button class="o-nav__burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="o-nav__links" id="nav-links">
+      <li><a href="#presentation">Le chœur</a></li>
+      <li><a href="#agenda">Agenda</a></li>
+      <li><a href="#rejoindre">Rejoindre</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="accueil" class="o-hero">
+    <canvas id="notes-canvas" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;"></canvas>
+    <div class="o-hero__content">
+      <p class="o-hero__eyebrow">Ensemble vocal — 12 voix</p>
+      <h1>Euphonie<span class="o-nav__clef">𝄞</span></h1>
+      <div class="o-hero__rule"></div>
+      <p class="o-hero__tagline">Chanter ensemble, avec rigueur et plaisir</p>
+      <a href="#presentation" class="m-cta-link">Découvrir le projet</a>
+    </div>
+  </section>
+
+  <section id="presentation" class="l-section l-section--parchment">
+    <div class="l-container">
+      <div class="o-presentation__grid">
+
+        <div class="a-fade-in">
+          <div class="m-section-header">
+            <span class="a-label">Le chœur</span>
+            <h2>La voix humaine, <em>à portée de main</em></h2>
+            <div class="a-rule"></div>
+          </div>
+          <p>Euphonie<span style="color:var(--color-gold)">S</span> est un ensemble de douze voix qui vous invite à vivre la musique chorale au plus près — dans des lieux intimes où chaque timbre compte, chaque silence résonne.</p>
+          <p>Notre répertoire puise dans la grande tradition classique et polyphonique, de la Renaissance aux compositeurs d'aujourd'hui. Des œuvres choisies pour leur beauté, leur profondeur, et l'émotion singulière que seules des voix humaines chantant ensemble savent produire.</p>
+          <p>À douze chanteurs, la musique se vit différemment. Pas de fosse d'orchestre, pas de scène lointaine : juste des voix, l'espace acoustique, et vous.</p>
+          <div class="o-piliers">
+            <div class="m-pilier">
+              <p class="m-pilier__titre">Des concerts en lieux choisis</p>
+              <p class="m-pilier__desc">Chapelles, salles patrimoniales, espaces insolites — des lieux dont l'acoustique et l'atmosphère magnifient naturellement le chant choral.</p>
+            </div>
+            <div class="m-pilier">
+              <p class="m-pilier__titre">Un répertoire qui traverse les siècles</p>
+              <p class="m-pilier__desc">Polyphonies de la Renaissance, motets baroques, mélodies romantiques, créations contemporaines — un voyage musical qui relie les époques par la seule voix.</p>
+            </div>
+            <div class="m-pilier">
+              <p class="m-pilier__titre">L'intimité d'un petit ensemble</p>
+              <p class="m-pilier__desc">Douze voix, c'est l'échelle où l'on entend chaque pupitre, où l'interprétation est précise et vivante, où le contact avec le public devient une part du concert.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="a-fade-in">
+          <div class="o-stats">
+            <div class="m-stat">
+              <div class="a-stat-number">12<span>voix</span></div>
+              <p class="a-stat-label">Un ensemble intime</p>
+            </div>
+            <div class="m-stat">
+              <div class="a-stat-number">4<span>pupitres</span></div>
+              <p class="a-stat-label">Soprano · Alto · Ténor · Basse</p>
+            </div>
+            <div class="m-stat">
+              <div class="a-stat-number">0<span>instrument</span></div>
+              <p class="a-stat-label">Voix seules, a cappella</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="agenda" class="l-section l-section--light">
+    <div class="l-container a-fade-in">
+      <div class="m-section-header">
+        <span class="a-label">Agenda</span>
+        <h2>Prochains <em>concerts</em></h2>
+        <div class="a-rule"></div>
+      </div>
+      <p>Les dates sont définies collectivement en début d'année. La programmation se précise au fil de l'avancement du répertoire.</p>
+      <div class="o-concerts">
+        <div class="m-concert">
+          <div class="m-concert__date">
+            <div class="m-concert__jour">—</div>
+            <div class="m-concert__mois">À venir</div>
+          </div>
+          <div class="m-concert__info">
+            <h3>Concert de fin de première saison</h3>
+            <p>Lieu à confirmer · Programme classique vocal</p>
+          </div>
+          <span class="a-tag">Annonce prochaine</span>
+        </div>
+        <div class="m-concert">
+          <div class="m-concert__date">
+            <div class="m-concert__jour">—</div>
+            <div class="m-concert__mois">À venir</div>
+          </div>
+          <div class="m-concert__info">
+            <h3>Concert au bénéfice d'une association</h3>
+            <p>Association partenaire choisie collégialement</p>
+          </div>
+          <span class="a-tag">Saison 2</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="rejoindre" class="l-section l-section--parchment">
+    <div class="l-container">
+      <div class="o-rejoindre__grid">
+
+        <div class="a-fade-in">
+          <div class="m-section-header">
+            <span class="a-label">Nous rejoindre</span>
+            <h2>Chanter avec Euphonie<span style="color:var(--color-gold)">S</span></h2>
+            <div class="a-rule"></div>
+          </div>
+          <p>L'intégration au chœur se fait à l'issue d'un processus en quatre étapes, conçu pour permettre à chaque candidat de vérifier que le projet correspond bien à ses attentes.</p>
+          <div class="o-etapes">
+            <div class="m-etape">
+              <div class="m-etape__num"></div>
+              <div class="m-etape__body">
+                <h4>Séance d'essai</h4>
+                <p>Vous participez à une répétition avec partitions et supports transmis à l'avance, pour découvrir le chœur de l'intérieur.</p>
+              </div>
+            </div>
+            <div class="m-etape">
+              <div class="m-etape__num"></div>
+              <div class="m-etape__body">
+                <h4>Échange avec la direction artistique</h4>
+                <p>Un temps de dialogue avec le chef de chœur pour évoquer votre parcours vocal et vos attentes.</p>
+              </div>
+            </div>
+            <div class="m-etape">
+              <div class="m-etape__num"></div>
+              <div class="m-etape__body">
+                <h4>Rencontre avec les choristes</h4>
+                <p>Un échange avec les membres pour évaluer ensemble l'adéquation avec le projet et le fonctionnement du groupe.</p>
+              </div>
+            </div>
+            <div class="m-etape">
+              <div class="m-etape__num"></div>
+              <div class="m-etape__body">
+                <h4>Décision collégiale</h4>
+                <p>La décision est prise collectivement, hors de votre présence, puis notifiée dans les meilleurs délais.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="a-fade-in">
+          <div class="o-encart">
+            <p class="o-encart__titre">Ce que le chœur <em>vous apporte</em></p>
+            <div class="m-encart-item">Partitions, enregistrements de travail et supports pédagogiques fournis plusieurs semaines avant les répétitions.</div>
+            <div class="m-encart-item">La lecture musicale n'est pas requise — les outils sont conçus pour permettre à chaque choriste de progresser de manière autonome.</div>
+            <div class="m-encart-item">Un cadre bienveillant et exigeant, avec un travail approfondi sur la musicalité et l'interprétation.</div>
+            <div class="m-encart-item">Une participation pleine à la vie artistique du chœur, du choix du répertoire aux décisions collectives.</div>
+            <p class="o-encart__note">« Les répétitions ont lieu une fois par mois, le samedi ou le dimanche, sur des dates définies ensemble en début d'année. »</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="l-section l-section--light">
+    <div class="l-container">
+      <div class="o-contact a-fade-in">
+        <div class="m-section-header m-section-header--center">
+          <span class="a-label">Contact</span>
+          <h2>Écrire à Euphonie<span style="color:var(--color-gold)">S</span></h2>
+          <div class="a-rule a-rule--center"></div>
+        </div>
+        <p>Pour toute question sur le chœur, une séance d'essai ou simplement pour en savoir plus, n'hésitez pas à nous écrire.</p>
+        <a href="/cdn-cgi/l/email-protection#593a36372d383a2d193c2c29313637303c2a773f2b" class="m-email-link"><span class="__cf_email__" data-cfemail="2b4844455f4a485f6b4e5e5b434445424e58054d59">[email&#160;protected]</span></a>
+        <p style="font-size: 0.85rem; margin-top: 1rem;">Nous vous répondrons dans les meilleurs délais.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="o-footer">
+    Euphonie<span>S</span> — Ensemble vocal · Association loi 1901
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="euphonies.js"></script>
+</body>
+</html>
