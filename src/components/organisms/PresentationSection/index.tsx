@@ -38,9 +38,9 @@ export default function PresentationSection() {
               heading={<>La voix humaine, <em>à portée de main</em></>}
             />
             <p>
-              Euphonie<span style={{ color: 'var(--color-gold)' }}>S</span> est un ensemble de douze
-              voix qui vous invite à vivre la musique chorale au plus près — dans des lieux intimes où
-              chaque timbre compte, chaque silence résonne.
+              Euphonie<span style={{ color: 'var(--color-gold)' }}>S</span> est un ensemble vocal de
+              douze voix basé à Besançon. Nous proposons des concerts de musique chorale classique et
+              Renaissance dans le Doubs et en Franche-Comté.
             </p>
             <p>
               Notre répertoire puise dans la grande tradition classique et polyphonique, de la
