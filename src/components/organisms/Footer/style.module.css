@@ -11,3 +11,13 @@
 .o-footer span {
   color: var(--accent-strong);
 }
+
+.o-footer__seo {
+  font-size: var(--text-xs);
+  color: var(--invert-muted);
+  max-width: 60ch;
+  margin: 0 auto var(--space-6);
+  line-height: 1.6;
+  letter-spacing: 0;
+  font-weight: var(--weight-light);
+}
