@@ -9,6 +9,7 @@ const mockConcerts = [
     day: '15',
     month: 'Avr',
     tag: 'Prochainement',
+    date: '2026-04-15',
   },
 ];
 
@@ -35,6 +36,18 @@ describe('ConcertList', () => {
     render(<ConcertList />);
     await waitFor(() => {
       expect(screen.getByRole('heading', { level: 3, name: 'Concert test' })).toBeInTheDocument();
+    });
+  });
+
+  it('injects a MusicEvent JSON-LD script for each concert', async () => {
+    const { container } = render(<ConcertList />);
+    await waitFor(() => {
+      const scripts = container.querySelectorAll('script[type="application/ld+json"]');
+      expect(scripts).toHaveLength(1);
+      const schema = JSON.parse(scripts[0].textContent!);
+      expect(schema['@type']).toBe('MusicEvent');
+      expect(schema.name).toBe('Concert test');
+      expect(schema.startDate).toBe('2026-04-15');
     });
   });
 });

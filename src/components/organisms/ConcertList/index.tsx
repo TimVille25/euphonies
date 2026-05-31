@@ -1,8 +1,30 @@
 import { useEffect, useState } from 'react';
 import type { Concert } from '../../../types/concert';
+import JsonLd from '../../atoms/JsonLd';
 import SectionHeader from '../../molecules/SectionHeader';
 import ConcertCard from '../../molecules/ConcertCard';
 import styles from './style.module.css';
+
+const CHOIR_URL = 'https://timville25.github.io/euphonies/';
+
+function buildEventSchema(concert: Concert): Record<string, unknown> {
+  const schema: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'MusicEvent',
+    name: concert.title,
+    description: concert.description,
+    eventStatus: 'https://schema.org/EventScheduled',
+    organizer: {
+      '@type': 'MusicGroup',
+      name: 'EuphonieS',
+      url: CHOIR_URL,
+    },
+  };
+  if (concert.date) {
+    schema.startDate = concert.date;
+  }
+  return schema;
+}
 
 export default function ConcertList() {
   const [concerts, setConcerts] = useState<Concert[]>([]);
@@ -16,6 +38,9 @@ export default function ConcertList() {
 
   return (
     <section id="agenda" className={`${styles['l-section']} ${styles['l-section--light']}`}>
+      {concerts.map((concert) => (
+        <JsonLd key={concert.id} schema={buildEventSchema(concert)} />
+      ))}
       <div className={styles['l-container']}>
         <SectionHeader label="Agenda" heading={<>Prochains <em>concerts</em></>} />
         <p>On chante bientôt près de chez vous. Restez à l'écoute.</p>

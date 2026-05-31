@@ -5,4 +5,5 @@ export interface Concert {
   day: string;
   month: string;
   tag: string;
+  date?: string;
 }
