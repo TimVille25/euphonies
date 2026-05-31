@@ -11,7 +11,7 @@ export default function ContactSection() {
             label="Contact"
             heading={
               <>
-                Écrire à Euphonie<span style={{ color: 'var(--color-gold)' }}>S</span>
+                Écrire à Euphonie<span style={{ color: 'var(--accent)' }}>S</span>
               </>
             }
             center

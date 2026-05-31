@@ -4,13 +4,13 @@
   gap: 0.8rem;
   margin-bottom: var(--space-4);
   font-size: 0.9rem;
-  color: rgba(246, 242, 235, 0.75);
+  color: var(--invert-fg);
   line-height: 1.55;
 }
 
 .m-encart-item::before {
   content: '—';
-  color: var(--color-gold-light);
+  color: var(--accent-strong);
   flex-shrink: 0;
   margin-top: 1px;
 }

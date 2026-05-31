@@ -12,8 +12,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background: var(--color-parchment-lt);
-  color: var(--color-ink);
+  background: var(--bg);
+  color: var(--fg);
   font-size: var(--text-base);
   line-height: 1.7;
   font-weight: var(--weight-light);
@@ -25,27 +25,27 @@ h1 {
   font-weight: var(--weight-light);
   line-height: 0.95;
   letter-spacing: -0.01em;
-  color: var(--color-ink);
+  color: var(--fg);
   margin-bottom: 0.2rem;
 }
-h1 em { font-style: italic; color: var(--color-gold); font-weight: var(--weight-light); }
-h1 span { color: var(--color-gold); }
+h1 em { font-style: italic; color: var(--accent); font-weight: var(--weight-light); }
+h1 span { color: var(--accent); }
 
 h2 {
   font-family: var(--font-serif);
   font-size: var(--text-2xl);
   font-weight: var(--weight-regular);
   line-height: 1.1;
-  color: var(--color-ink);
+  color: var(--fg);
   margin-bottom: var(--space-8);
 }
-h2 em { font-style: italic; color: var(--color-gold); }
+h2 em { font-style: italic; color: var(--accent); }
 
 h3 {
   font-family: var(--font-serif);
   font-size: var(--text-lg);
   font-weight: var(--weight-regular);
-  color: var(--color-ink);
+  color: var(--fg);
   margin-bottom: 0.3rem;
 }
 
@@ -53,13 +53,13 @@ h4 {
   font-family: var(--font-serif);
   font-size: var(--text-md);
   font-weight: var(--weight-medium);
-  color: var(--color-ink);
+  color: var(--fg);
   margin-bottom: 0.4rem;
 }
 
 p {
   margin-bottom: var(--space-4);
-  color: var(--color-ink-soft);
+  color: var(--fg-soft);
 }
 p:last-child { margin-bottom: 0; }
 

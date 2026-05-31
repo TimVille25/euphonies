@@ -3,8 +3,8 @@
   font-weight: var(--weight-regular);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-gold);
-  border: 0.5px solid var(--color-gold-light);
+  color: var(--accent);
+  border: 0.5px solid var(--accent-strong);
   border-radius: 2px;
   padding: 4px 10px;
   white-space: nowrap;

@@ -29,14 +29,14 @@
   font-weight: var(--weight-regular);
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--accent);
   margin-bottom: var(--space-6);
 }
 
 .o-hero__rule {
   width: 48px;
   height: 1px;
-  background: var(--color-gold);
+  background: var(--accent);
   margin: 0 auto var(--space-10);
 }
 
@@ -46,7 +46,7 @@
   font-size: clamp(1.1rem, 2.5vw, 1.5rem);
   font-style: italic;
   font-weight: var(--weight-light);
-  color: var(--color-ink-muted);
+  color: var(--fg-muted);
   margin-top: var(--space-5);
   margin-bottom: var(--space-10);
   letter-spacing: 0.02em;

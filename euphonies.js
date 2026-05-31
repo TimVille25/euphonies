@@ -10,12 +10,12 @@ document.body.classList.add('js-ready');
   // Glyphes et palette de couleurs en accord avec la charte
   const GLYPHS = ['♩','♪','♫','♬','♭','♮','♯'];
   const COLORS = [
-    '#a8855a', // gold principal
-    '#c9a97a', // gold light
-    '#7a6f62', // ink muted
-    '#3d3830', // ink soft
-    '#c9a97a', // gold light (pondération plus forte)
-    '#a8855a', // gold principal (pondération plus forte)
+    '#ecb62a',
+    '#f2c84d',
+    '#9c9080',
+    '#c8a23a',
+    '#f2c84d',
+    '#ecb62a',
   ];
 
   // Redimensionner le canvas en pixels réels

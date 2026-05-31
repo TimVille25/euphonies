@@ -3,7 +3,7 @@
 }
 
 .l-section--parchment {
-  background: var(--color-parchment);
+  background: var(--bg-alt);
 }
 
 .l-container {
@@ -24,34 +24,35 @@
 }
 
 .o-encart {
-  background: var(--color-ink);
-  color: var(--color-parchment-lt);
+  background: var(--invert-bg);
+  color: var(--invert-fg);
   padding: var(--space-8);
   position: sticky;
   top: 88px;
+  border-top: 2px solid var(--accent);
 }
 
 .o-encart__titre {
   font-family: var(--font-serif);
   font-size: 1.6rem;
   font-weight: var(--weight-light);
-  color: var(--color-parchment-lt);
+  color: var(--invert-fg);
   margin-bottom: var(--space-5);
   line-height: 1.2;
 }
 
 .o-encart__titre em {
   font-style: italic;
-  color: var(--color-gold-light);
+  color: var(--accent-strong);
 }
 
 .o-encart__note {
-  border-top: 0.5px solid rgba(246, 242, 235, 0.15);
+  border-top: 0.5px solid var(--invert-rule);
   padding-top: var(--space-5);
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 0.95rem;
-  color: rgba(246, 242, 235, 0.55);
+  color: var(--invert-muted);
   line-height: 1.6;
 }
 

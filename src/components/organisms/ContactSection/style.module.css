@@ -3,7 +3,7 @@
 }
 
 .l-section--light {
-  background: var(--color-parchment-lt);
+  background: var(--bg);
 }
 
 .l-container {
@@ -17,7 +17,7 @@
 
 .o-contact p {
   font-size: 0.92rem;
-  color: var(--color-ink-muted);
+  color: var(--fg-muted);
 }
 
 .o-contact__note {

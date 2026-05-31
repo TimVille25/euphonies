@@ -4,12 +4,12 @@ import styles from './style.module.css';
 
 const GLYPHS = ['♩', '♪', '♫', '♬', '♭', '♮', '♯'];
 const COLORS = [
-  '#a8855a',
-  '#c9a97a',
-  '#7a6f62',
-  '#3d3830',
-  '#c9a97a',
-  '#a8855a',
+  '#ecb62a',
+  '#f2c84d',
+  '#9c9080',
+  '#c8a23a',
+  '#f2c84d',
+  '#ecb62a',
 ];
 
 interface Note {

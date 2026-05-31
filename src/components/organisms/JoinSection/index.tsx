@@ -43,7 +43,7 @@ export default function JoinSection() {
               label="Nous rejoindre"
               heading={
                 <>
-                  Chanter avec Euphonie<span style={{ color: 'var(--color-gold)' }}>S</span>
+                  Chanter avec Euphonie<span style={{ color: 'var(--accent)' }}>S</span>
                 </>
               }
             />

@@ -1,6 +1,6 @@
 .o-footer {
-  background: var(--color-ink);
-  color: rgba(246, 242, 235, 0.4);
+  background: var(--invert-bg);
+  color: var(--invert-muted);
   text-align: center;
   padding: var(--space-8) 2rem;
   font-size: var(--text-sm);
@@ -9,5 +9,5 @@
 }
 
 .o-footer span {
-  color: var(--color-gold-light);
+  color: var(--accent-strong);
 }

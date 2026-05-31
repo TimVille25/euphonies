@@ -1,15 +1,44 @@
 :root {
-  --color-ink:          #1a1714;
-  --color-ink-soft:     #3d3830;
-  --color-ink-muted:    #7a6f62;
-  --color-parchment:    #f6f2eb;
-  --color-parchment-lt: #faf8f4;
-  --color-gold:         #a8855a;
-  --color-gold-light:   #c9a97a;
-  --color-gold-pale:    #f0e6d4;
-  --color-rule:         rgba(26, 23, 20, 0.12);
-  --color-rule-strong:  rgba(26, 23, 20, 0.25);
+  /* Fonds */
+  --bg:            #15110b;
+  --bg-alt:        #1d1810;
 
+  /* Texte */
+  --fg:            #f3eee4;
+  --fg-soft:       #d6cdbd;
+  --fg-muted:      #9c9080;
+
+  /* Accent (jaune ambré) */
+  --accent:        #ecb62a;
+  --accent-strong: #f2c84d;
+  --accent-soft:   rgba(236, 182, 42, 0.12);
+
+  /* Filets / séparateurs */
+  --rule:          rgba(243, 238, 228, 0.12);
+  --rule-strong:   rgba(243, 238, 228, 0.24);
+
+  /* Navigation */
+  --nav-bg:        rgba(21, 17, 11, 0.88);
+
+  /* Hero */
+  --hero-bg:       #15110b;
+  --hero-fg:       #f3eee4;
+  --hero-muted:    #9c9080;
+
+  /* Blocs inversés (encart « Nous rejoindre », footer) */
+  --invert-bg:     #0d0a06;
+  --invert-fg:     #f3eee4;
+  --invert-muted:  rgba(243, 238, 228, 0.55);
+  --invert-rule:   rgba(243, 238, 228, 0.15);
+
+  /* Notes flottantes du hero */
+  --note-1: #ecb62a;
+  --note-2: #f2c84d;
+  --note-3: #9c9080;
+  --note-4: #c8a23a;
+  --note-opacity: 0.34;
+
+  /* Typographie */
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans:  'Jost', sans-serif;
 
@@ -39,4 +68,112 @@
   --space-20: 8rem;
 
   --transition-fast: 0.2s ease;
+}
+
+/* ── Palette « Nuit dorée » (par défaut, identique à :root ci-dessus) ── */
+:root[data-palette="nuit"] {
+  --bg:            #15110b;
+  --bg-alt:        #1d1810;
+  --fg:            #f3eee4;
+  --fg-soft:       #d6cdbd;
+  --fg-muted:      #9c9080;
+  --accent:        #ecb62a;
+  --accent-strong: #f2c84d;
+  --accent-soft:   rgba(236, 182, 42, 0.12);
+  --rule:          rgba(243, 238, 228, 0.12);
+  --rule-strong:   rgba(243, 238, 228, 0.24);
+  --nav-bg:        rgba(21, 17, 11, 0.88);
+  --hero-bg:       #15110b;
+  --hero-fg:       #f3eee4;
+  --hero-muted:    #9c9080;
+  --invert-bg:     #0d0a06;
+  --invert-fg:     #f3eee4;
+  --invert-muted:  rgba(243, 238, 228, 0.55);
+  --invert-rule:   rgba(243, 238, 228, 0.15);
+  --note-1: #ecb62a;
+  --note-2: #f2c84d;
+  --note-3: #9c9080;
+  --note-4: #c8a23a;
+  --note-opacity: 0.34;
+}
+
+/* ── Palette « Lumière » ── */
+:root[data-palette="lumiere"] {
+  --bg:            #faf7f0;
+  --bg-alt:        #f2ece0;
+  --fg:            #18130b;
+  --fg-soft:       #3c352a;
+  --fg-muted:      #7d7263;
+  --accent:        #c8920a;
+  --accent-strong: #a97a05;
+  --accent-soft:   #f3e6c6;
+  --rule:          rgba(24, 19, 11, 0.12);
+  --rule-strong:   rgba(24, 19, 11, 0.26);
+  --nav-bg:        rgba(250, 247, 240, 0.9);
+  --hero-bg:       #faf7f0;
+  --hero-fg:       #18130b;
+  --hero-muted:    #7d7263;
+  --invert-bg:     #16120b;
+  --invert-fg:     #faf7f0;
+  --invert-muted:  rgba(250, 247, 240, 0.6);
+  --invert-rule:   rgba(250, 247, 240, 0.16);
+  --note-1: #c8920a;
+  --note-2: #d8a52a;
+  --note-3: #b0a08a;
+  --note-4: #7d7263;
+  --note-opacity: 0.26;
+}
+
+/* ── Palette « Affiche » ── */
+:root[data-palette="affiche"] {
+  --bg:            #f8f4ec;
+  --bg-alt:        #ffffff;
+  --fg:            #16110a;
+  --fg-soft:       #38322a;
+  --fg-muted:      #7a6f60;
+  --accent:        #c98f06;
+  --accent-strong: #a87505;
+  --accent-soft:   #f4e7c4;
+  --rule:          rgba(22, 17, 10, 0.12);
+  --rule-strong:   rgba(22, 17, 10, 0.26);
+  --nav-bg:        rgba(248, 244, 236, 0.9);
+  --hero-bg:       #14100a;
+  --hero-fg:       #f4efe4;
+  --hero-muted:    #a99c89;
+  --invert-bg:     #14100a;
+  --invert-fg:     #f4efe4;
+  --invert-muted:  rgba(244, 239, 228, 0.58);
+  --invert-rule:   rgba(244, 239, 228, 0.16);
+  --note-1: #ecb62a;
+  --note-2: #f2c84d;
+  --note-3: #a99c89;
+  --note-4: #c8a23a;
+  --note-opacity: 0.34;
+}
+
+/* ── Palette « Ambre doux » ── */
+:root[data-palette="ambre"] {
+  --bg:            #f7f1e5;
+  --bg-alt:        #efe6d3;
+  --fg:            #20190f;
+  --fg-soft:       #41382a;
+  --fg-muted:      #80735f;
+  --accent:        #b8860f;
+  --accent-strong: #9c6f08;
+  --accent-soft:   #efdfb8;
+  --rule:          rgba(32, 25, 15, 0.12);
+  --rule-strong:   rgba(32, 25, 15, 0.24);
+  --nav-bg:        rgba(247, 241, 229, 0.9);
+  --hero-bg:       #f7f1e5;
+  --hero-fg:       #20190f;
+  --hero-muted:    #80735f;
+  --invert-bg:     #1b150c;
+  --invert-fg:     #f7f1e5;
+  --invert-muted:  rgba(247, 241, 229, 0.6);
+  --invert-rule:   rgba(247, 241, 229, 0.16);
+  --note-1: #b8860f;
+  --note-2: #cda032;
+  --note-3: #a8997f;
+  --note-4: #80735f;
+  --note-opacity: 0.24;
 }
