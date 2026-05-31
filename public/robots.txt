@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://timville25.github.io/euphonies/sitemap.xml
