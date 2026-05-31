@@ -43,10 +43,7 @@ export default function PresentationSection() {
               Renaissance dans le Doubs et en Franche-Comté.
             </p>
             <p>
-              Notre répertoire puise dans la grande tradition classique et polyphonique, de la
-              Renaissance aux compositeurs d'aujourd'hui. Des œuvres choisies pour leur beauté, leur
-              profondeur, et l'émotion singulière que seules des voix humaines chantant ensemble savent
-              produire.
+              Notre répertoire de musique classique traverse les siècles, de la Renaissance aux compositeurs contemporains.
             </p>
             <p>
               À douze chanteurs, la musique se vit différemment. Pas de fosse d'orchestre, pas de

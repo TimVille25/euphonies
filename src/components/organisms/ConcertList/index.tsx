@@ -43,7 +43,8 @@ export default function ConcertList() {
       ))}
       <div className={styles['l-container']}>
         <SectionHeader label="Agenda" heading={<>Prochains <em>concerts</em></>} />
-        <p>On chante bientôt près de chez vous. Restez à l'écoute.</p>
+        <p>Nos concerts de musique chorale sont proposés à Besançon et dans toute la Franche-Comté.
+          Chaque concert est conçu pour favoriser la proximité entre les chanteurs et le public.</p>
         <div className={styles['o-concerts']}>
           {concerts.map((concert) => (
             <ConcertCard key={concert.id} concert={concert} />
