@@ -18,7 +18,7 @@ export default function Nav() {
   return (
     <nav className={styles['o-nav']}>
       <a href="#accueil" className={styles['o-nav__logo']}>
-        Euphonie<span>S</span>
+        <img src={`${import.meta.env.BASE_URL}logo-white-no-bg.png`} alt="EuphonieS" className={styles['o-nav__logo-img']} />
       </a>
       <button
         className={`${styles['o-nav__burger']}${open ? ` ${styles['is-open']}` : ''}`}

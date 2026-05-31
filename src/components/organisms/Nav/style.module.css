@@ -15,15 +15,13 @@
 }
 
 .o-nav__logo {
-  font-family: var(--font-serif);
-  font-size: var(--text-xl);
-  font-weight: var(--weight-medium);
-  letter-spacing: 0.02em;
-  color: var(--fg);
+  display: flex;
+  align-items: center;
 }
 
-.o-nav__logo span {
-  color: var(--accent);
+.o-nav__logo-img {
+  height: 36px;
+  width: auto;
 }
 
 .o-nav__burger {
