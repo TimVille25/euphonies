@@ -17,8 +17,8 @@ export default function ContactSection() {
             center
           />
           <p>
-            Pour toute question sur le chœur, une séance d'essai ou simplement pour en savoir plus,
-            n'hésitez pas à nous écrire.
+            Pour toute question sur ce chœur de chambre à Besançon, une séance d'essai ou pour en
+            savoir plus sur notre ensemble vocal en Franche-Comté, n'hésitez pas à nous écrire.
           </p>
           <EmailLink email="contact@euphonies.fr" />
           <p className={styles['o-contact__note']}>Nous vous répondrons dans les meilleurs délais.</p>

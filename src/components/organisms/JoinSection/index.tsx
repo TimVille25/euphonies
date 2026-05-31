@@ -7,7 +7,7 @@ const ETAPES = [
   {
     titre: "Séance d'essai",
     description:
-      "Vous participez à une répétition avec partitions et supports transmis à l'avance, pour découvrir le chœur de l'intérieur.",
+      "Vous participez à une répétition avec partitions et supports transmis à l'avance, pour découvrir l'ensemble vocal de l'intérieur.",
   },
   {
     titre: 'Échange avec la direction artistique',
@@ -48,6 +48,11 @@ export default function JoinSection() {
               }
             />
             <p>
+              Vous êtes chanteur ou chanteuse et souhaitez rejoindre un ensemble vocal à Besançon ?
+              EuphonieS, chœur de chambre a cappella en Franche-Comté, accueille régulièrement de
+              nouveaux choristes passionnés de musique classique et de chant choral.
+            </p>
+            <p>
               L'intégration au chœur se fait à l'issue d'un processus en quatre étapes, conçu pour
               permettre à chaque candidat de vérifier que le projet correspond bien à ses attentes.
             </p>
@@ -66,8 +71,8 @@ export default function JoinSection() {
                 <EncartItem key={item}>{item}</EncartItem>
               ))}
               <p className={styles['o-encart__note']}>
-                « Les répétitions ont lieu une fois par mois, le samedi ou le dimanche, sur des dates
-                définies ensemble en début d'année. »
+                « Les répétitions ont lieu une fois par mois, le samedi ou le dimanche, pour préparer
+                des concerts donnés à Besançon et dans le Doubs au fil de la saison. »
               </p>
             </div>
           </div>

@@ -7,17 +7,17 @@ const PILIERS = [
   {
     titre: 'Des concerts en lieux choisis',
     description:
-      'Chapelles, salles patrimoniales, espaces insolites — des lieux dont l\'acoustique et l\'atmosphère magnifient naturellement le chant choral.',
+      'Chapelles, salles patrimoniales et espaces insolites en Franche-Comté — des lieux dont l\'acoustique magnifie naturellement le chant choral a cappella.',
   },
   {
     titre: 'Un répertoire qui traverse les siècles',
     description:
-      'Polyphonies de la Renaissance, motets baroques, mélodies romantiques, créations contemporaines — un voyage musical qui relie les époques par la seule voix.',
+      'Polyphonies de la Renaissance, motets baroques, lieder romantiques, œuvres contemporaines — un voyage de musique classique qui relie les époques par le seul chant a cappella.',
   },
   {
-    titre: 'L\'intimité d\'un petit ensemble',
+    titre: 'L\'intimité d\'un chœur de chambre',
     description:
-      'Douze voix, c\'est l\'échelle où l\'on entend chaque pupitre, où l\'interprétation est précise et vivante, où le contact avec le public devient une part du concert.',
+      'Douze voix, c\'est l\'échelle du chœur de chambre : celle où l\'on entend chaque pupitre, où l\'interprétation est précise et vivante, et où le contact avec le public devient une part du concert.',
   },
 ];
 
@@ -38,15 +38,15 @@ export default function PresentationSection() {
               heading={<>La voix humaine, <em>à portée de main</em></>}
             />
             <p>
-              Euphonie<span style={{ color: 'var(--accent)' }}>S</span> est un ensemble vocal de
-              douze voix basé à Besançon. Nous proposons des concerts de musique chorale classique et
-              Renaissance dans le Doubs et en Franche-Comté.
+              Euphonie<span style={{ color: 'var(--accent)' }}>S</span> est un ensemble vocal et chœur de chambre de
+              douze voix basé à Besançon. Nous proposons des concerts de musique classique a cappella
+              dans le Doubs et en Franche-Comté.
             </p>
             <p>
-              Notre répertoire de musique classique traverse les siècles, de la Renaissance aux compositeurs contemporains.
+              Notre répertoire de chant choral traverse les siècles, de la polyphonie Renaissance à la musique classique et contemporaine.
             </p>
             <p>
-              À douze chanteurs, la musique se vit différemment. Pas de fosse d'orchestre, pas de
+              À douze voix, le chant choral a cappella se vit autrement. Pas de fosse d'orchestre, pas de
               scène lointaine : juste des voix, l'espace acoustique, et vous.
             </p>
             <div className={styles['o-piliers']}>

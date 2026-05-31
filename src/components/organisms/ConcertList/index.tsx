@@ -43,8 +43,8 @@ export default function ConcertList() {
       ))}
       <div className={styles['l-container']}>
         <SectionHeader label="Agenda" heading={<>Prochains <em>concerts</em></>} />
-        <p>Nos concerts de musique chorale sont proposés à Besançon et dans toute la Franche-Comté.
-          Chaque concert est conçu pour favoriser la proximité entre les chanteurs et le public.</p>
+        <p>Nos concerts de musique classique a cappella sont proposés à Besançon, dans le Doubs et dans toute la Franche-Comté.
+          Chaque programme de chant choral est conçu pour favoriser la proximité entre les chanteurs et le public.</p>
         <div className={styles['o-concerts']}>
           {concerts.map((concert) => (
             <ConcertCard key={concert.id} concert={concert} />
