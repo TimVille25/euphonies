@@ -129,12 +129,12 @@ export default function Hero() {
     <section id="accueil" className={styles['o-hero']}>
       <canvas ref={canvasRef} className={styles['o-hero__canvas']} aria-hidden="true" />
       <div className={styles['o-hero__content']}>
-        <p className={styles['o-hero__eyebrow']}>Ensemble vocal — 12 voix</p>
+        <p className={styles['o-hero__eyebrow']}>Ensemble vocal classique à Besançon</p>
         <h1>
           Euphonie<span>S</span>
+          <span className={styles['o-hero__tagline']}>Musique Renaissance, classique et contemporaine a cappella en Franche-Comté</span>
         </h1>
         <div className={styles['o-hero__rule']} />
-        <p className={styles['o-hero__tagline']}>De la Renaissance à aujourd'hui, a cappella.</p>
         <CtaLink href="#presentation">Découvrir le projet</CtaLink>
       </div>
     </section>
