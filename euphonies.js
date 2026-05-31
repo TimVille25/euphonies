@@ -141,3 +141,33 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.a-fade-in').forEach(el => observer.observe(el));
+
+// Load and inject concerts from JSON
+async function loadConcerts() {
+  try {
+    const response = await fetch('concerts.json');
+    const concerts = await response.json();
+
+    const concertsContainer = document.querySelector('.o-concerts');
+    if (!concertsContainer) return;
+
+    concertsContainer.innerHTML = concerts.map(concert => `
+      <div class="m-concert">
+        <div class="m-concert__date">
+          <div class="m-concert__jour">${concert.day}</div>
+          <div class="m-concert__mois">${concert.month}</div>
+        </div>
+        <div class="m-concert__info">
+          <h3>${concert.title}</h3>
+          <p>${concert.description}</p>
+        </div>
+        <span class="a-tag">${concert.tag}</span>
+      </div>
+    `).join('');
+  } catch (error) {
+    console.error('Erreur lors du chargement des concerts:', error);
+  }
+}
+
+// Load concerts when DOM is ready
+document.addEventListener('DOMContentLoaded', loadConcerts);

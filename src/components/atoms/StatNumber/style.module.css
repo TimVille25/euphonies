@@ -1,0 +1,15 @@
+.a-stat-number {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: var(--weight-light);
+  line-height: 1;
+  color: var(--color-ink);
+  margin-bottom: 0.4rem;
+}
+
+.a-stat-number span {
+  font-size: var(--text-xl);
+  color: var(--color-gold);
+  vertical-align: middle;
+  margin-left: 2px;
+}

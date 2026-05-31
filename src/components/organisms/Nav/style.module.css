@@ -1,0 +1,116 @@
+.o-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-12);
+  height: 64px;
+  background: rgba(250, 248, 244, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 0.5px solid var(--color-rule);
+}
+
+.o-nav__logo {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.02em;
+  color: var(--color-ink);
+}
+
+.o-nav__logo span {
+  color: var(--color-gold);
+}
+
+.o-nav__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.o-nav__burger span {
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--color-ink);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: center;
+}
+
+.o-nav__burger.is-open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.o-nav__burger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.o-nav__burger.is-open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.o-nav__links {
+  display: flex;
+  gap: var(--space-8);
+  list-style: none;
+}
+
+.o-nav__links a {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-regular);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  transition: color var(--transition-fast);
+}
+
+.o-nav__links a:hover {
+  color: var(--color-ink);
+}
+
+@media (max-width: 768px) {
+  .o-nav {
+    padding: 0 var(--space-5);
+  }
+
+  .o-nav__burger {
+    display: flex;
+  }
+
+  .o-nav__links {
+    display: none;
+  }
+
+  .o-nav__links.is-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: rgba(250, 248, 244, 0.98);
+    backdrop-filter: blur(8px);
+    border-bottom: 0.5px solid var(--color-rule);
+    padding: var(--space-5) var(--space-5) var(--space-8);
+    gap: var(--space-5);
+    z-index: 99;
+  }
+
+  .o-nav__links.is-open a {
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    color: var(--color-ink);
+  }
+}

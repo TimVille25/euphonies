@@ -1,0 +1,13 @@
+.o-footer {
+  background: var(--color-ink);
+  color: rgba(246, 242, 235, 0.4);
+  text-align: center;
+  padding: var(--space-8) 2rem;
+  font-size: var(--text-sm);
+  letter-spacing: 0.1em;
+  font-weight: var(--weight-light);
+}
+
+.o-footer span {
+  color: var(--color-gold-light);
+}

@@ -1,0 +1,7 @@
+.m-section-header {
+  margin-bottom: var(--space-8);
+}
+
+.m-section-header--center {
+  text-align: center;
+}

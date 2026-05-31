@@ -1,0 +1,42 @@
+:root {
+  --color-ink:          #1a1714;
+  --color-ink-soft:     #3d3830;
+  --color-ink-muted:    #7a6f62;
+  --color-parchment:    #f6f2eb;
+  --color-parchment-lt: #faf8f4;
+  --color-gold:         #a8855a;
+  --color-gold-light:   #c9a97a;
+  --color-gold-pale:    #f0e6d4;
+  --color-rule:         rgba(26, 23, 20, 0.12);
+  --color-rule-strong:  rgba(26, 23, 20, 0.25);
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans:  'Jost', sans-serif;
+
+  --text-xs:   0.68rem;
+  --text-sm:   0.78rem;
+  --text-base: 1rem;
+  --text-md:   1.05rem;
+  --text-lg:   1.25rem;
+  --text-xl:   1.5rem;
+  --text-2xl:  clamp(2rem, 4vw, 3rem);
+  --text-hero: clamp(4rem, 10vw, 8rem);
+
+  --weight-light:   300;
+  --weight-regular: 400;
+  --weight-medium:  500;
+
+  --space-1:  0.3rem;
+  --space-2:  0.5rem;
+  --space-3:  0.8rem;
+  --space-4:  1.2rem;
+  --space-5:  1.5rem;
+  --space-6:  1.8rem;
+  --space-8:  2.5rem;
+  --space-10: 3rem;
+  --space-12: 4rem;
+  --space-16: 6rem;
+  --space-20: 8rem;
+
+  --transition-fast: 0.2s ease;
+}

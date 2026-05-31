@@ -1,0 +1,48 @@
+.m-concert {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-6) 0;
+  border-top: 0.5px solid var(--color-rule);
+}
+
+.m-concert:last-child {
+  border-bottom: 0.5px solid var(--color-rule);
+}
+
+.m-concert__date {
+  text-align: center;
+}
+
+.m-concert__jour {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: var(--weight-light);
+  line-height: 1;
+  color: var(--color-ink);
+}
+
+.m-concert__mois {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-top: 2px;
+}
+
+.m-concert__info p {
+  font-size: 0.88rem;
+  color: var(--color-ink-muted);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .m-concert {
+    grid-template-columns: 64px 1fr;
+  }
+
+  .m-concert :global(.a-tag) {
+    display: none;
+  }
+}

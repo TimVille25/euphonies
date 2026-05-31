@@ -1,0 +1,12 @@
+.m-stat {
+  border-top: 0.5px solid var(--color-rule-strong);
+  padding-top: var(--space-5);
+}
+
+.m-stat__label {
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-muted);
+  text-transform: uppercase;
+  margin: 0;
+}

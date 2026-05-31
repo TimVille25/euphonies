@@ -1,0 +1,22 @@
+.l-section {
+  padding: var(--space-20) 2rem;
+}
+
+.l-section--light {
+  background: var(--color-parchment-lt);
+}
+
+.l-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.o-concerts {
+  margin-top: var(--space-4);
+}
+
+@media (max-width: 768px) {
+  .l-section {
+    padding: 5rem var(--space-5);
+  }
+}
