@@ -40,9 +40,16 @@
 @media (max-width: 768px) {
   .m-concert {
     grid-template-columns: 64px 1fr;
+    align-items: start;
   }
 
-  .m-concert :global(.a-tag) {
-    display: none;
+  .m-concert__date {
+    grid-row: 1 / 3;
+    padding-top: var(--space-1);
+  }
+
+  .m-concert__tag {
+    grid-column: 2;
+    margin-top: var(--space-2);
   }
 }

@@ -2,7 +2,7 @@
 
 ## Project
 
-EuphonieS is the website of a 12-voice a cappella choral ensemble based in Besançon, France. The site presents the choir, lists upcoming concerts, and allows interested singers to apply to join.
+EuphonieS is the website of a small a cappella chamber ensemble based in Besançon, France. The site presents the choir, lists upcoming concerts, and allows interested singers to apply to join.
 
 **Content language:** French exclusively.
 
@@ -100,6 +100,10 @@ Class names inside a module file follow a BEM-inspired convention prefixed by at
 ```
 
 Global design tokens (CSS custom properties for colors, fonts, spacing) live in `src/styles/tokens.css` and are imported once at the app root. No component imports `tokens.css` directly — use `var(--token-name)`.
+
+### Mobile-first navigation
+
+Every component must be designed mobile-first. **Never develop a layout without verifying it at 375 px width.** When a component uses CSS Grid or Flexbox, define the mobile layout first, then add `@media (min-width: …)` overrides for wider viewports — not the reverse. **Never hide UI content with `display: none` to work around a layout problem** — fix the layout instead (e.g. use `grid-row` / `grid-column` placement to reflow elements across rows). Never hide or resize child elements using `:global()` selectors targeting another component's scoped class: CSS Modules hashes class names, so `:global(.a-tag)` will not match. Wrap child elements in a locally-owned container element and target that class instead.
 
 ---
 

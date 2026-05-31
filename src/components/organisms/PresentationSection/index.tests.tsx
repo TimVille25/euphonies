@@ -15,7 +15,7 @@ describe('PresentationSection', () => {
 
   it('renders the stats', () => {
     render(<PresentationSection />);
-    expect(screen.getByText('voix')).toBeInTheDocument();
     expect(screen.getByText('pupitres')).toBeInTheDocument();
+    expect(screen.getByText('instrument')).toBeInTheDocument();
   });
 });

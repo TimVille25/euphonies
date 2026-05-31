@@ -17,12 +17,11 @@ const PILIERS = [
   {
     titre: 'L\'intimité d\'un chœur de chambre',
     description:
-      'Douze voix, c\'est l\'échelle du chœur de chambre : celle où l\'on entend chaque pupitre, où l\'interprétation est précise et vivante, et où le contact avec le public devient une part du concert.',
+      'À l\'échelle d\'un ensemble de chambre, chaque pupitre s\'entend distinctement : l\'interprétation est précise et vivante, et le contact avec le public devient une part du concert.',
   },
 ];
 
 const STATS = [
-  { value: 12, unit: 'voix', label: 'Un ensemble intime' },
   { value: 4, unit: 'pupitres', label: 'Soprano · Alto · Ténor · Basse' },
   { value: 0, unit: 'instrument', label: 'Voix seules, a cappella' },
 ];
@@ -38,15 +37,15 @@ export default function PresentationSection() {
               heading={<>La voix humaine, <em>à portée de main</em></>}
             />
             <p>
-              Euphonie<span style={{ color: 'var(--accent)' }}>S</span> est un ensemble vocal et chœur de chambre de
-              douze voix basé à Besançon. Nous proposons des concerts de musique classique a cappella
+              Euphonie<span style={{ color: 'var(--accent)' }}>S</span> est un ensemble vocal de chambre
+              basé à Besançon. Nous proposons des concerts de musique classique a cappella
               dans le Doubs et en Franche-Comté.
             </p>
             <p>
               Notre répertoire de chant choral traverse les siècles, de la polyphonie Renaissance à la musique classique et contemporaine.
             </p>
             <p>
-              À douze voix, le chant choral a cappella se vit autrement. Pas de fosse d'orchestre, pas de
+              En ensemble de chambre, le chant choral a cappella se vit autrement. Pas de fosse d'orchestre, pas de
               scène lointaine : juste des voix, l'espace acoustique, et vous.
             </p>
             <div className={styles['o-piliers']}>

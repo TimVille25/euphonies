@@ -15,7 +15,7 @@ export const MusicGroupSchema: Story = {
       '@type': 'MusicGroup',
       name: 'EuphonieS',
       description:
-        'EuphonieS est un ensemble vocal de 12 chanteurs basé à Besançon.',
+        'EuphonieS est un ensemble vocal de chambre basé à Besançon.',
       url: 'https://timville25.github.io/euphonies/',
     },
   },

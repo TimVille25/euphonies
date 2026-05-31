@@ -17,7 +17,9 @@ export default function ConcertCard({ concert }: ConcertCardProps) {
         <h3>{concert.title}</h3>
         <p>{concert.description}</p>
       </div>
-      <Tag>{concert.tag}</Tag>
+      <div className={styles['m-concert__tag']}>
+        <Tag>{concert.tag}</Tag>
+      </div>
     </article>
   );
 }
