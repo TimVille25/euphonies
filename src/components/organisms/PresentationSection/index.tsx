@@ -34,7 +34,7 @@ export default function PresentationSection() {
           <div>
             <SectionHeader
               label="Le chœur"
-              heading={<>La voix humaine, <em>à portée de main</em></>}
+              heading="Un ensemble vocal de musique classique et contemporaine"
             />
             <p>
               Euphonie<span style={{ color: 'var(--accent)' }}>S</span> est un ensemble vocal de chambre

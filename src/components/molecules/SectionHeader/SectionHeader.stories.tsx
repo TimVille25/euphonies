@@ -7,7 +7,7 @@ export default meta;
 type Story = StoryObj<typeof SectionHeader>;
 
 export const Default: Story = {
-  args: { label: 'Le chœur', heading: <>La voix humaine, <em>à portée de main</em></> },
+  args: { label: 'Le chœur', heading: 'Un ensemble vocal de musique classique et contemporaine' },
 };
 
 export const Centered: Story = {
