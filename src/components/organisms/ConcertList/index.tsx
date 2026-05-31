@@ -8,7 +8,7 @@ export default function ConcertList() {
   const [concerts, setConcerts] = useState<Concert[]>([]);
 
   useEffect(() => {
-    fetch('/concerts.json')
+    fetch(`${import.meta.env.BASE_URL}concerts.json`)
       .then((r) => r.json())
       .then((data: Concert[]) => setConcerts(data))
       .catch(() => {});
